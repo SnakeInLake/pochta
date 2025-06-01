@@ -1,0 +1,166 @@
+/* src/pages/FilesPage.css */
+.files-page-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.upload-section h3, 
+.filters-section h3,
+.controls-section h3, /* Если будет заголовок для сортировки */
+.files-page-container h3 { /* Общий стиль для заголовков секций */
+    margin-top: 0;
+    color: #333;
+}
+
+.upload-section input[type="file"] {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block; /* Чтобы кнопка была на следующей строке, если нужно */
+}
+
+.upload-section button,
+.filters-section button,
+.controls-section button,
+.pagination button {
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-right: 10px; /* Отступы между кнопками */
+}
+.upload-section button:last-child,
+.filters-section button:last-child,
+.controls-section button:last-child,
+.pagination button:last-child {
+    margin-right: 0;
+}
+
+
+.upload-section button:disabled,
+.filters-section button:disabled,
+.controls-section button:disabled,
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.upload-section button:hover:not(:disabled),
+.filters-section button:hover:not(:disabled),
+.controls-section button:hover:not(:disabled),
+.pagination button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.filters-section .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.filters-section input[type="text"],
+.filters-section input[type="date"],
+.controls-section select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.controls-section select {
+    width: auto; /* Для select можно сделать автоширину */
+    margin-right: 10px;
+}
+
+.filters-section .filter-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px; /* Пробел между кнопками Apply и Reset */
+}
+.filters-section button[type="button"] { /* Стили для Reset кнопки */
+    background-color: #6c757d;
+}
+.filters-section button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+
+.upload-error {
+    margin-top: 10px;
+}
+
+.file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px; /* Немного больше padding */
+    border-bottom: 1px solid #eee;
+}
+.file-item:last-child {
+    border-bottom: none;
+}
+
+.file-item .file-info {
+    display: flex;
+    flex-direction: column; /* Информация о файле в столбик */
+    gap: 5px; /* Отступы между элементами информации */
+    flex-grow: 1;
+}
+.file-item .file-info strong {
+    font-size: 1.1em;
+}
+.file-item .file-info small {
+    color: #555;
+    font-size: 0.9em;
+}
+
+
+.file-item .file-actions button {
+    margin-left: 10px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+.file-item .file-actions button:hover {
+    background-color: #e0e0e0;
+}
+.file-item .delete-button {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+.file-item .delete-button:hover {
+    background-color: #c82333;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.pagination span {
+    margin: 0 10px;
+}
